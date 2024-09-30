@@ -82,6 +82,58 @@ xui.Class('App', 'xui.Module',{
                 ])
             );
             
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput3")
+                .setLeft("22.095238095238095em")
+                .setTop("20.571428571428573em")
+                .setWidth("9.6em")
+                .setLabelSize("8em")
+                .setLabelCaption("Open")
+                .setType("file")
+            );
+            
+            append(
+                xui.create("xui.UI.Panel")
+                .setHost(host,"xui_ui_panel4")
+                .setDock("none")
+                .setLeft("1.5238095238095237em")
+                .setTop("20.571428571428573em")
+                .setCaption("Panel")
+            );
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button12")
+                .setTheme("pro")
+                .setLeft("13.714285714285714em")
+                .setTop("20.571428571428573em")
+                .setWidth("10.59047619047619em")
+                .setCaption("Execute Now")
+            );
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button15")
+                .setLeft("46.476190476190474em")
+                .setTop("3.0476190476190474em")
+                .setWidth("8.228571428571428em")
+                .setCaption("Roblox Scripts")
+                .setImageClass("https://th.bing.com/th/id/R.213cd81ba2d6b1ea8a15c6fbcd4096be?rik=IStUAIpvnpypcA&pid=ImgRaw&r=0")
+                .onClick([
+                    {
+                        "desc" : "Action 1",
+                        "type" : "other",
+                        "target" : "url",
+                        "args" : [
+                            "https://scriptblox.com/paste/"
+                        ],
+                        "method" : "mailTo",
+                        "event" : 1
+                    }
+                ])
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
