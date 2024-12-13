@@ -74,7 +74,7 @@ xui.Class('App', 'xui.Module',{
                         "target" : "msg",
                         "args" : [
                             "Inject Note",
-                            "The app has been Injected into Roblox !"
+                            "Inject Failed. Roblox not found or unsupported version. Please open Roblox or Downgrade to supported version."
                         ],
                         "method" : "pop",
                         "event" : 1
@@ -91,15 +91,18 @@ xui.Class('App', 'xui.Module',{
                 .setLabelSize("8em")
                 .setLabelCaption("Open")
                 .setType("file")
-            );
-            
-            append(
-                xui.create("xui.UI.Panel")
-                .setHost(host,"xui_ui_panel4")
-                .setDock("none")
-                .setLeft("1.5238095238095237em")
-                .setTop("20.571428571428573em")
-                .setCaption("Panel")
+                .onClick([
+                    {
+                        "desc" : "Action 1",
+                        "type" : "other",
+                        "target" : "msg",
+                        "args" : [undefined, undefined, 200, 5000],
+                        "method" : "message",
+                        "event" : 1,
+                        "okFlag" : "_DI_succeed",
+                        "koFlag" : "_DI_fail"
+                    }
+                ])
             );
             
             append(
